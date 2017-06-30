@@ -1,0 +1,71 @@
+Currently Loaded Modulefiles:
+  1) intel/intel-2016-update2      3) openmpi/openmpi-2.0.0-intel
+  2) nrn/nrn-mpi-7.4               4) openmpi/openmpi-2.0.1
+lewis4-r630-hpc4rc-node368, reporting for duty.
+Starting 100 Cell LA Model at Fri Jun 30 15:13:41 CDT 2017
+/group/neurolab/neuron_python/nrn_virtualenv/bin/python
+numprocs=10
+NEURON -- Release 7.4 (1370:16a7055d4a86) 2015-11-09
+Duke, Yale, and the BlueBrain Project -- Copyright 1984-2015
+See http://www.neuron.yale.edu/neuron/credits
+
+Additional mechanisms from files
+ BAer2CeLPKCDm.mod BAer2CeLPKCDp.mod BAer2CeM.mod BAf2CeLPKCDm.mod BAf2CeLPKCDp.mod BAf2CeM.mod BAnor2CeLPKCDm.mod BAnor2CeLPKCDp.mod BAnor2CeM.mod CE_cal.mod CE_capool.mod CE_cat.mod CE_ia.mod CE_ih.mod CE_Ihva.mod CE_im.mod CE_kdr.mod CE_leak.mod CeLPKCDm2CeLPKCDm.mod CeLPKCDm2CeLPKCDp.mod CeLPKCDm2CeM.mod CeLPKCDp2CeLPKCDm.mod CeLPKCDp2CeLPKCDp.mod CeLPKCDp2CeM.mod CeM2CeM.mod CE_na.mod CE_sahp.mod ITCd2CeLPKCDm.mod ITCd2CeLPKCDp.mod ITCv2CeM.mod LAer2CeLPKCDm.mod LAer2CeLPKCDp.mod LAer2CeM.mod LAf2CeLPKCDm.mod LAf2CeLPKCDp.mod LAf2CeM.mod LAnor2CeLPKCDm.mod LAnor2CeLPKCDp.mod LAnor2CeM.mod shock.mod vecevent.mod
+
+  Number of cells on node 1: 3 
+  Number of connections on node 1: 10 
+  Number of stims on node 1: 2 
+Recording 0 traces of 0 types on node 1
+  Number of cells on node 2: 3 
+  Number of connections on node 2: 9 
+  Number of stims on node 2: 2 
+Recording 0 traces of 0 types on node 2
+  Number of cells on node 3: 2 
+  Number of connections on node 3: 5 
+  Number of stims on node 3: 1 
+Recording 0 traces of 0 types on node 3
+  Number of cells on node 4: 2 
+  Number of connections on node 4: 5 
+  Number of stims on node 4: 1 
+Recording 0 traces of 0 types on node 4
+  Number of cells on node 5: 2 
+  Number of connections on node 5: 5 
+  Number of stims on node 5: 1 
+Recording 0 traces of 0 types on node 5
+  Number of cells on node 6: 2 
+  Number of connections on node 6: 5 
+  Number of stims on node 6: 1 
+Recording 0 traces of 0 types on node 6
+  Number of cells on node 7: 2 
+  Number of connections on node 7: 6 
+  Number of stims on node 7: 1 
+Recording 0 traces of 0 types on node 7
+  Number of cells on node 8: 2 
+  Number of connections on node 8: 12 
+  Number of stims on node 8: 2 
+Recording 0 traces of 0 types on node 8
+  Number of cells on node 9: 2 
+  Number of connections on node 9: 10 
+  Number of stims on node 9: 2 
+Recording 0 traces of 0 types on node 9
+Creating network of 7 cell populations on 10 hosts...
+  Number of cells on node 0: 3 
+  Done; cell creation time = 0.03 s.
+Making connections...
+  Number of connections on node 0: 9 
+  Done; cell connection time = 0.06 s.
+Adding stims...
+  Number of stims on node 0: 2 
+  Done; cell stims creation time = 0.06 s.
+Recording 0 traces of 0 types on node 0
+
+Running simulation for 620000 ms...
+  Done; run time = 212.76 s; real-time ratio: 2.91.
+
+Gathering data...
+--------------------------------------------------------------------------
+mpirun noticed that process rank 5 with PID 156091 on node lewis4-r630-hpc4rc-node368 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+Program complete...
+slurmstepd: error: Exceeded step memory limit at some point.
+slurmstepd: error: Exceeded job memory limit at some point.
