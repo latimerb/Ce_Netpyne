@@ -15,7 +15,7 @@ echo "Starting 100 Cell LA Model at $(date)"
 
 which python
 
-mpirun -np $SLURM_NTASKS nrniv -python -mpi Ce.py
+mpirun -np $SLURM_NTASKS nrniv -python -mpi SingleCell.py
 
 echo "Program complete..."
 

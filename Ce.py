@@ -127,7 +127,7 @@ netParams.stimSourceParams['bkg_CeM'] = {'type': 'NetStim', 'rate': 2.5, 'noise'
 #June16,2017 --- Changed tau1 and tau2 above so weights may no longer be correct
 netParams.stimTargetParams['bkg->PKCdM_RS'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
 netParams.stimTargetParams['bkg->PKCdM_LTB'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
-etParams.stimTargetParams['bkg->PKCdM_LF'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_LF'}, 'weight': 0.009, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->PKCdM_LF'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_LF'}, 'weight': 0.009, 'delay': 0, 'synMech': 'exc'}
 netParams.stimTargetParams['bkg->PKCdP_RS'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
 netParams.stimTargetParams['bkg->PKCdP_LTB'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
 netParams.stimTargetParams['bkg->PKCdP_LF'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_LF'}, 'weight': 0.009, 'delay': 0, 'synMech': 'exc'}
