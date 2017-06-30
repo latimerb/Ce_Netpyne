@@ -125,15 +125,15 @@ netParams.stimSourceParams['bkg_CeM'] = {'type': 'NetStim', 'rate': 2.5, 'noise'
 
 #June15,2017 --- Tuned weights to elicit exactly one AP per stim
 #June16,2017 --- Changed tau1 and tau2 above so weights may no longer be correct
-#netParams.stimTargetParams['bkg->PKCdM_RS'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
-#netParams.stimTargetParams['bkg->PKCdM_LTB'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
-#etParams.stimTargetParams['bkg->PKCdM_LF'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_LF'}, 'weight': 0.009, 'delay': 0, 'synMech': 'exc'}
-#netParams.stimTargetParams['bkg->PKCdP_RS'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
-#netParams.stimTargetParams['bkg->PKCdP_LTB'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
-#netParams.stimTargetParams['bkg->PKCdP_LF'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_LF'}, 'weight': 0.009, 'delay': 0, 'synMech': 'exc'}
-#netParams.stimTargetParams['bkg->CeM_RS'] = {'source': 'bkg_CeM', 'conds': {'popLabel': 'CeM_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
-#netParams.stimTargetParams['bkg->CeM_LTB'] = {'source': 'bkg_CeM', 'conds': {'popLabel': 'CeM_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
-#netParams.stimTargetParams['bkg->CeM_LF'] = {'source': 'bkg_CeM', 'conds': {'popLabel': 'CeM_LF'}, 'weight':  0.009, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->PKCdM_RS'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->PKCdM_LTB'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
+etParams.stimTargetParams['bkg->PKCdM_LF'] = {'source': 'bkg_PKCdM', 'conds': {'popLabel': 'PKCdM_LF'}, 'weight': 0.009, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->PKCdP_RS'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->PKCdP_LTB'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->PKCdP_LF'] = {'source': 'bkg_PKCdP', 'conds': {'popLabel': 'PKCdP_LF'}, 'weight': 0.009, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->CeM_RS'] = {'source': 'bkg_CeM', 'conds': {'popLabel': 'CeM_RS'}, 'weight': 0.0026, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->CeM_LTB'] = {'source': 'bkg_CeM', 'conds': {'popLabel': 'CeM_LTB'}, 'weight': 0.005, 'delay': 0, 'synMech': 'exc'}
+netParams.stimTargetParams['bkg->CeM_LF'] = {'source': 'bkg_CeM', 'conds': {'popLabel': 'CeM_LF'}, 'weight':  0.009, 'delay': 0, 'synMech': 'exc'}
 
 '''
 # Use this to perform current clamp on cell types
@@ -173,7 +173,7 @@ netParams.connParams['BA->PKCdM'] = {'preConds': {'popLabel': ['BAf','BAer']},
 	'sec': 'adend',				# section to connect to
 	'loc': 0.5,					# location of synapse
 	'synMech': 'baf2CeLPKCDm'}   		# target synaptic mechanism
-'''
+
 netParams.connParams['ITCd->PKCdM'] = {'preConds': {'popLabel': 'ITCd'}, 
 	'postConds': {'popLabel': ['PKCdM_RS','PKCdM_LTB','PKCdM_LF']},
 	'probability': 1, 			# probability of connection
@@ -295,7 +295,7 @@ netParams.connParams['CeM->CeM'] = {'preConds': {'popLabel': ['CeM_RS','CeM_LTB'
 	#'sec': 'adend',				# section to connect to
 	#'loc': 0.5,					# location of synapse
 	'synMech': 'CeM2CeM'}   		# target synaptic mechanism
-'''
+
 
 
 
@@ -309,20 +309,21 @@ simConfig.recordTraces = {'V_soma':{'sec':'soma','loc':0.5,'var':'v'}}  # Dict w
 simConfig.recordStep = 0.25 			# Step size in ms to save data (eg. V traces, LFP, etc)
 simConfig.filename = 'model_output'  # Set file output name
 
-simConfig.saveMat = False 		# Save params, network a sim output to pickle file
-simConfig.analysis['plotRaster'] = True# Plot a raster
-simConfig.analysis['plotTraces'] = {'include': [81, 86, 91]} 			# Plot recorded traces for this list of cells
-simConfig.analysis['plot2Dnet']  = True         # plot 2D visualization of cell positions and connections
+simConfig.saveMat = True		# Save params, network a sim output to mat file
+sim.create()
+#simConfig.analysis['plotRaster'] = True# Plot a raster
+#simConfig.analysis['plotTraces'] = {'include': [81, 86, 91]} 			# Plot recorded traces for this list of cells
+#simConfig.analysis['plot2Dnet']  = True         # plot 2D visualization of cell positions and connections
 #simConfig.analysis['plotConn'] = {'feature':'numConns'}
-simConfig.timestampFilename = True
+#simConfig.timestampFilename = True
 # Create network and run simulation
-sim.createSimulateAnalyze(netParams, simConfig)
+#sim.createSimulateAnalyze(netParams, simConfig)
 #sim.simulate()
 #sim.saveData()
-#for i in range(1, 4):
-#	simConfig.filename = 'Run' + str(i)
-#	sim.net.modifySynMechs({'label':'laf2CeLPKCDm', 'initW': 2.7*(i)})
-#	sim.simulate()
-#	sim.saveData()
+for i in range(1, 4):
+	simConfig.filename = 'Run' + str(i)
+	net.modifyStims({'conds':{'label': 'bkg->PKCdM_RS'}, 'interval': 1000/(5+i)})
+	sim.simulate()
+	sim.saveData()
 
 import pylab; pylab.show()  # this line is only necessary in certain systems where figures appear empty

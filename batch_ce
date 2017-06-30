@@ -13,10 +13,9 @@ module list
 echo "$(hostname), reporting for duty."
 echo "Starting 100 Cell LA Model at $(date)"
 
-source /group/rcworkshop1/neuron_python/bin/activate_nrn
 which python
 
-mpirun -np $SLURM_NTASKS nrniv -python -mpi 100_Cell_LA.py
+mpirun -np $SLURM_NTASKS nrniv -python -mpi Ce.py
 
 echo "Program complete..."
-deactivate
+
